@@ -5,8 +5,11 @@ body {
   padding: 10px;
 }
 .intro{
+    display: flex;
     position: relative;
-    padding: 50px; 
+    justify-content: space-between; /* text left, image right */
+    align-items: center; /* vertical centering */
+    /* padding: 20px;  */
     color:black ;
     background: #70e1f5;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  /* Chrome 10-25, Safari 5.1-6 */
@@ -17,15 +20,16 @@ body {
 }
 
 .text {
-    position: absolute;
-    padding: 20px;
+    flex: 1; /* let text take all remaining space */
+    padding: 40px;
     line-height: 3;
-    top: 50%; 
-    left: 10%;
-    transform: translate(0,-50%);
+    /* top: 50%;  */
+    padding-right: 140px;
+    /* left: 10%; */
+    /* transform: translate(0,-50%); */
     text-transform: uppercase;
     font-family: verdana;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 700;
     color: #f5f5f5;
     text-shadow:
@@ -36,6 +40,17 @@ body {
   display: block;
   width: 100%;
 }
+.wave-image {
+  display: none;
+  flex-shrink: 0; /* don’t shrink */
+    width: 80px;      /* adjust size */
+    height: 80px;     /* adjust size */
+    background-image: url('home_page.jpg'); /* replace with your wave image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50% 0 0 50%; /* creates a curved "wave-like" corner */
+  }
 
 /* Tablet and up */
 @media (min-width: 768px) {
@@ -44,12 +59,32 @@ body {
     width: 80%;
     margin: auto;
   }
+  .text {
+    padding-right: 80px; /* less space for smaller image */
+    font-size: 40px;
+    line-height: 1.5;
+  }
+  .wave-image {
+    display: block;
+    width: 400px;
+    height: 500px;
+  }
+  
 }
 
 /* Desktop and up */
 @media (min-width: 1200px) {
   .container {
     width: 60%;
+  }
+  .wave-image {
+        display: block;
+        width: 550px;
+        height: 500px;
+    }
+    .text {
+    padding-right: 80px; /* less space for smaller image */
+    font-size: 40px;
   }
 }
 
