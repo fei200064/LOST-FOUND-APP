@@ -1,6 +1,10 @@
 
     Mobile-first default styles
 body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(11, 11, 11)!important;
   font-size: 16px;
   padding: 10px;
 }
@@ -35,6 +39,7 @@ body {
     text-shadow:
     2px 2px 60px rgba(0,0,0,0.5), /* soft main shadow */
     0 0 90px rgba(245,245,245,0.2); /* subtle glow effect */
+    
 }
 .container {
   display: block;
@@ -51,6 +56,52 @@ body {
     background-position: center;
     border-radius: 50% 0 0 50%; /* creates a curved "wave-like" corner */
   }
+.box{
+  border:0px solid black;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: center;  /* horizontally center content */
+  align-items: center;      /* vertically center content */
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+.box-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+  word-spacing: 0.2px;
+  color: #1C1919;
+  font-weight: 400;
+  text-decoration: none;
+  font-style: italic;
+  font-variant: normal;
+  text-transform: none;
+  max-width: 90%; /* keep text readable on small screens */
+}
+.box-item h3 {
+  text-align: center; /* centers all lines of the text */
+  max-width: 90%;     /* keeps text from stretching too wide */
+  line-height: 1.4;   /* improves readability */
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #fffbfb;
+  background-color: rgb(207, 215, 245);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #1C1919;
+  color: white;
+}
 
 /* Tablet and up */
 @media (min-width: 768px) {
@@ -68,6 +119,10 @@ body {
     display: block;
     width: 400px;
     height: 500px;
+  }
+   .box-item {
+    font-size: 20px;
+    max-width: 70%;
   }
   
 }
