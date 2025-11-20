@@ -4,8 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit Found</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--connect google font-->
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-    
+     <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand rubik-80s-fade-regular me-4" href="#">Lost And Found </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item me-4">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item me-4">
+          <a class="nav-link" href="submit_found.html">Submit Found Item</a>
+        </li>
+        <li class="nav-item me-5">
+          <a class="nav-link" href="#">View Recent Post</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+ </nav>
+    <div style="display: flex; flex-direction: column;justify-content: center;align-items: center;padding:20px;">
+     <h1>Report Found Item</h1>
+     <p style="text-align: center;">Please provide details about the item you found to help us locate its owner</p>
+    </div>
+    <div class="container1">
+        <div  id="submit_found_form">
+            <form class="form-box">
+              <div class="form-column">
+                <label for="itemName">What was found ? *</label><br>
+                <input type="text" name="itemName" id="itemName" placeholder="Name" style="width:100%; height: 50px;" required>
+              </div>
+
+              <div class="form-column">
+                <label for="category">Category</label><br>
+                <select id="category" name="category" style="padding: 5px;width:100%; height: 50px;">
+                  <option value="">Select a category</option>
+                  <option value="cash">Cash/Wallets/Purses</option>
+                  <option value="electronic">Electronic devices</option>
+                  <option value="id">Identification documents</option>
+                  <option value="key">Keys</option>
+                  <option value="medication">Medication</option>
+                  <option value="book">Books/Stationery</option>
+                </select>
+               </div>
+            </form>
+            <form class="form-box" style="padding-top: 50px;">
+                <div class="form-column">
+                    <label for="date">Date Found *</label>
+                    <input type="date" id="date" name="birthday"style="width:100%;height: 50px;" required>
+                </div>
+                <div class="form-column">
+                    <label for="time">Time Found: *</label>
+                    <input type="time" id="time" name="time" min="09:00" max="17:00"style="width:100%;height: 50px;" required>
+                </div>
+            </form>
+            <form class="form-box" style="padding-top: 50px;">
+                <div class="form-column">
+                    <label for="brand">Brand</label>
+                    <input type="text" id="brand" name="brand"style="width:100%;height: 50px;"placeholder="Brand">
+                </div>
+                <div class="form-column">
+                    <label for="color">Color</label>
+                    <input type="text" id="color" name="color" style="width:100%;height: 50px;" placeholder="Color">
+                </div>
+            </form>
+            <form class="form-box" style="padding-top: 50px;">
+                <div class="form-column">
+                    <label for="addition">Additional Information</label>
+                    <input type="text" id="addition" name="addition"style="width:100%;height: 50px;"placeholder="Information">
+                </div>
+        </div>
+    </div>
+
 </body>
 </html>

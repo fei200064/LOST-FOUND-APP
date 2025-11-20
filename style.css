@@ -45,12 +45,17 @@ body {
   display: block;
   width: 100%;
 }
+.container1 {
+  display: block;
+  width: 100%;
+   padding: 20px;
+}
 .wave-image {
   display: none;
   flex-shrink: 0; /* don’t shrink */
     width: 80px;      /* adjust size */
     height: 80px;     /* adjust size */
-    background-image: url('home_page.jpg'); /* replace with your wave image */
+    background-image: url('photo/home_page.jpg'); /* replace with your wave image */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -131,6 +136,22 @@ button:hover {
   background-color: #1C1919;
   color: white;
 }
+.form-box{
+  width: 100%;
+   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+ 
+}
+.form-column{
+  flex-grow: 1;
+}
+/* .form-column{
+  flex:1 0 0;
+} */
 
 /* Tablet and up */
 @media (min-width: 768px) {
@@ -153,7 +174,15 @@ button:hover {
     font-size: 20px;
     max-width: 70%;
   }
-  
+  .form-column:last-child {
+  margin-left: auto;
+}
+  .form-column{
+  flex:1 1 0;
+}
+.container1 {
+   padding: 50px;
+}
 }
 
 /* Desktop and up */
