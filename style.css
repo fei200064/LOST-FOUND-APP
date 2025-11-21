@@ -152,6 +152,25 @@ button:hover {
 /* .form-column{
   flex:1 0 0;
 } */
+#image-upload {
+  display: none;
+}
+.image-box{
+  height: 100px;
+  width:100%;
+  border-radius:6px;
+  border:1px dashed #999;
+}
+.image-box:hover{
+  color: blue;
+  border: 1px dashed blue;
+}
+#img-view{
+  height: 100px;
+  width:100%;
+  border-radius:6px;
+  border:1px dashed #999;
+}
 
 /* Tablet and up */
 @media (min-width: 768px) {

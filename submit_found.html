@@ -44,7 +44,7 @@
                 <input type="text" name="itemName" id="itemName" placeholder="Name" style="width:100%; height: 50px;" required>
               </div>
 
-              <div class="form-column">
+              <!-- <div class="form-column">
                 <label for="category">Category</label><br>
                 <select id="category" name="category" style="padding: 5px;width:100%; height: 50px;">
                   <option value="">Select a category</option>
@@ -55,7 +55,7 @@
                   <option value="medication">Medication</option>
                   <option value="book">Books/Stationery</option>
                 </select>
-               </div>
+               </div> -->
             </form>
             <form class="form-box" style="padding-top: 50px;">
                 <div class="form-column">
@@ -82,8 +82,24 @@
                     <label for="addition">Additional Information</label>
                     <input type="text" id="addition" name="addition"style="width:100%;height: 50px;"placeholder="Information">
                 </div>
+            </form>
+            <form class="form-box" action="/upload-image" method="post" enctype="multipart/form-data" style="padding-top:50px;">
+              <div class="form-column">
+                <label for="image-upload"id="drop-area">Upload Image:</label><br>
+                <input type="file" id="image-upload" name="image-upload" accept="image/*"style="padding-top: 10px;"><br>
+                <div id="img-view">
+                   <label for="image-upload" class="image-box" style="text-align: center; padding: 30px;">Upload image</label>
+                </div>
+              </div>
+            </form>
+            <form class="form-box" style="padding-top: 50px;">
+                <div class="form-column">
+                    <label for="location">Location Information</label>
+                    <input type="text" id="location" name="location"style="width:100%;height: 50px;"placeholder="Location">
+                </div>
+            </form>
         </div>
-    </div>
-
+    </div>  
+  <script src="app.js"></script>
 </body>
 </html>
