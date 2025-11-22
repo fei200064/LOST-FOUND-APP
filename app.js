@@ -35,7 +35,7 @@ function initMap(){
        componentRestrictions:{country:"my"} //restrict country region to Malaysia
     })
 
-    autocomplete.addEventListener("place_changed",()=>{
+    autocomplete.addListener("place_changed",()=>{
        const place=autocomplete.getPlace() //update latest place
        console.log(place);
          if(!place.geometry){
@@ -46,7 +46,7 @@ function initMap(){
           map.setCenter(place.geometry.location);
           map.setZoom(16);
         //Update marker
-          marker.setPosition(place.geometry.LatLng);
+          marker.setPosition(place.geometry.location);
           marker.setVisible(true);
         //Update lat and lng
           document.getElementById("lat").value=place.geometry.location.lat();
