@@ -2,13 +2,22 @@
 const dropArea=document.getElementById("drop-area");
 const imageUpload=document.getElementById("image-upload");
 const imageView=document.getElementById("img-view");
+const close_icon=document.getElementById("close_icon");
 
 imageUpload.addEventListener("change",uploadImage1);
 function uploadImage1(){
     let imgLink=URL.createObjectURL(imageUpload.files[0]);
     imageView.style.backgroundImage=`url(${imgLink})`;
-    imageView.innerHTML = "";
+    imageView.querySelector("p").style.display = "none"; // hide text
+     close_icon.style.display = "block"; 
 }
+
+close_icon.addEventListener("click",function(){
+  imageView.style.backgroundImage="";
+  imageView.querySelector("p").style.display = "block"; // show text again
+  imageUpload.value = ""; // reset file input
+  close_icon.style.display = "none"; 
+})
 
 let map;
 let marker;
